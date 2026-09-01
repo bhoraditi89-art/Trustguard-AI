@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrustGuard AI</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="brand">
+        <div class="brand-mark" aria-hidden="true">TG</div>
+        <div>
+          <p class="eyebrow">BROWSER PROTECTION</p>
+          <h1>TrustGuard <span>AI</span></h1>
+        </div>
+        <span class="live-dot" title="Ready to scan"></span>
+      </header>
+
+      <section class="score-panel">
+        <div class="score-ring" id="score-ring">
+          <div class="score-value"><strong id="trust-score">--</strong><span>/100</span></div>
+          <small>TRUST SCORE</small>
+        </div>
+        <div class="score-copy">
+          <p class="status" id="scan-status">Waiting for scan</p>
+          <p id="page-domain">Open a page to see its trust signals.</p>
+        </div>
+      </section>
+
+      <section class="summary">
+        <div><strong id="scanned-count">0</strong><span>signals scanned</span></div>
+        <div><strong id="flagged-count">0</strong><span>items flagged</span></div>
+      </section>
+
+      <section class="findings">
+        <div class="section-heading"><span>Latest findings</span><button id="refresh" type="button">Refresh</button></div>
+        <div id="finding-list" class="finding-list"><p class="empty">No findings yet. Scan a page to begin.</p></div>
+      </section>
+
+      <footer><span>Protected by TrustGuard heuristics</span><a href="http://localhost:8000/healthz" target="_blank" rel="noreferrer">API status</a></footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
